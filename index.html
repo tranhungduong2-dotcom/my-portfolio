@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio | Home</title>
+  <title>D7 | Java Developer &amp; Music Composer</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="style.css">
@@ -13,7 +13,10 @@
 <body>
   <header>
     <div class="container nav-container">
-      <a href="index.html" class="logo">MY LOGO</a>
+      <a href="index.html" class="logo">
+        <span class="logo-mark">D7</span>
+        <span class="logo-tag">JAVA &bull; AUDIO</span>
+      </a>
       <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">
         <i class="fas fa-bars"></i>
       </button>
@@ -28,34 +31,55 @@
   </header>
 
   <main class="container">
-
+    <!-- Hero Section -->
     <section class="hero">
       <div class="hero-text">
-        <h1>Welcome to My Website</h1>
-        <p>Hi! I am a passionate web developer building clean, accessible, and responsive websites from scratch using HTML5, CSS3, and JavaScript.</p>
-        <a href="about.html" class="btn">Learn More</a>
+        <span class="pill-tag">Java Backend Engineer &times; Music Producer</span>
+        <h1>Logic in <span class="accent-blue">Java</span>, Emotion in <span class="accent-lavender">Sound</span>.</h1>
+        <p>Welcome to <strong>D7</strong>. I architect resilient backend microservices by day and compose futuristic pop, ambient melodies, and synth arrangements by night.</p>
+        <div class="hero-actions">
+          <a href="about.html" class="btn btn-primary">Explore D7</a>
+          <!-- EXTRA 4: Interactive D7 Chord Synth -->
+          <button type="button" id="play-chord-btn" class="btn btn-secondary">
+            <i class="fas fa-volume-up" id="chord-icon"></i> <span id="chord-text">Play D7 Chord</span>
+          </button>
+        </div>
       </div>
       <div class="hero-image">
-        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80" alt="Laptop with code on a desk">
+        <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=700&q=80" alt="Music production keyboard and digital workstation">
       </div>
     </section>
+
     <section class="projects">
-      <h2>Featured Projects</h2>
+      <div class="section-header">
+        <h2>Selected Works</h2>
+        <div class="filter-group">
+          <button type="button" class="filter-btn active" data-filter="all">All</button>
+          <button type="button" class="filter-btn" data-filter="java">Java Dev</button>
+          <button type="button" class="filter-btn" data-filter="music">Music</button>
+        </div>
+      </div>
+
       <div class="grid-3">
-        <article class="card">
-          <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=400&q=80" alt="Minimalist web design layout">
-          <h3>Project One</h3>
-          <p>A responsive personal blog built with semantic HTML5 and CSS Grid layout.</p>
+        <article class="card" data-category="java">
+          <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=500&q=80" alt="Java Spring Boot backend code">
+          <span class="card-tag tag-java">Java / Spring Boot</span>
+          <h3>D7 Cloud Stream API</h3>
+          <p>High-throughput RESTful microservice built with Java 21, Spring Boot, and Redis for real-time audio metadata streaming.</p>
         </article>
-        <article class="card">
-          <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=400&q=80" alt="Programming code screen">
-          <h3>Project Two</h3>
-          <p>An interactive task tracker featuring smooth CSS transitions and clean typography.</p>
+
+        <article class="card" data-category="music">
+          <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=500&q=80" alt="Synthesizer and studio gear">
+          <span class="card-tag tag-music">Original Track</span>
+          <h3>"Ice &amp; Chrome" EP</h3>
+          <p>A 4-track electronic pop &amp; R&amp;B composition blending crisp vocal chops, lush pads, and dominant 7th harmonies.</p>
         </article>
-        <article class="card">
-          <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=400&q=80" alt="Workspace setup">
-          <h3>Project Three</h3>
-          <p>A mobile-first photography gallery adhering strictly to W3C accessibility standards.</p>
+
+        <article class="card" data-category="java">
+          <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=500&q=80" alt="Audio signal processing architecture">
+          <span class="card-tag tag-java">Java Audio DSP</span>
+          <h3>J-Synth MIDI Engine</h3>
+          <p>Low-latency MIDI controller router written in pure Java SE using javax.sound.midi for live stage performance.</p>
         </article>
       </div>
     </section>
@@ -63,11 +87,11 @@
 
   <footer>
     <div class="container footer-content">
-      <p>&copy; 2026 My Portfolio. Built from scratch.</p>
+      <p>&copy; 2026 <strong>D7 Studio</strong> &mdash; Coded &amp; Composed from Scratch.</p>
       <div class="social-links">
         <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
-        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="SoundCloud"><i class="fab fa-soundcloud"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
       </div>
     </div>
   </footer>
