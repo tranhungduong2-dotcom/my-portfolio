@@ -3,15 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio | About</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <title>D7 | About</title>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
     <div class="container nav-container">
-      <a href="index.html" class="logo">MY LOGO</a>
+      <a href="index.html" class="logo">
+        <span class="logo-mark">D7</span>
+        <span class="logo-tag">JAVA &bull; AUDIO</span>
+      </a>
       <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">
         <i class="fas fa-bars"></i>
       </button>
@@ -25,27 +28,50 @@
     </div>
   </header>
 
-  <main class="container page-content">
-    <h1>About Me</h1>
-    <div class="hero">
+  <main class="container">
+    <section class="hero">
       <div class="hero-image">
-        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80" alt="Team collaborating on web design">
+        <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=700&q=80" alt="Music producer and software engineer workspace">
       </div>
       <div class="hero-text">
-        <h2>My Web Design Journey</h2>
-        <p>I started learning web development to turn creative ideas into functional digital experiences. Through the Web Design for Everybody specialization, I mastered semantic HTML, responsive CSS, and user-centered design.</p>
-        <p>Every page on this site is hand-coded without frameworks to ensure fast loading times and complete W3C compliance.</p>
+        <span class="pill-tag">Behind D7</span>
+        <h1>Two Worlds, One Rhythm</h1>
+        <p>Why <strong>D7</strong>? In music theory, a Dominant 7th chord (D7) creates tension that begs for resolution. In software engineering, writing clean Java architecture solves complex system bottlenecks.</p>
+        <p>I bridge analytical problem-solving with melodic storytelling—building reliable enterprise applications while producing modern, icy-clean soundscapes.</p>
       </div>
-    </div>
+    </section>
+
+    <section class="projects">
+      <div class="section-header">
+        <h2>Core Stack &amp; Studio Gear</h2>
+      </div>
+      <div class="grid-3">
+        <article class="card">
+          <span class="card-tag tag-java">Backend Stack</span>
+          <h3>Java Ecosystem</h3>
+          <p>Java 17/21, Spring Boot, Hibernate, PostgreSQL, Docker, and REST API design with focus on clean OOP principles.</p>
+        </article>
+        <article class="card">
+          <span class="card-tag tag-music">Production</span>
+          <h3>Music Composition</h3>
+          <p>DAW arrangement, sound design, vocal harmony layering, mixing, and chord progression theory.</p>
+        </article>
+        <article class="card">
+          <span class="card-tag tag-java">Web Craft</span>
+          <h3>Frontend &amp; Standards</h3>
+          <p>Semantic HTML5, responsive CSS Grid/Flexbox, Web Audio API, and strict W3C accessibility compliance.</p>
+        </article>
+      </div>
+    </section>
   </main>
 
   <footer>
     <div class="container footer-content">
-      <p>&copy; 2026 My Portfolio. Built from scratch.</p>
+      <p>&copy; 2026 <strong>D7 Studio</strong> &mdash; Coded &amp; Composed from Scratch.</p>
       <div class="social-links">
         <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
-        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="SoundCloud"><i class="fab fa-soundcloud"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
       </div>
     </div>
   </footer>
