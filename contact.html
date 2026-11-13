@@ -3,15 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio | Contact</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <title>D7 | Contact</title>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
     <div class="container nav-container">
-      <a href="index.html" class="logo">MY LOGO</a>
+      <a href="index.html" class="logo">
+        <span class="logo-mark">D7</span>
+        <span class="logo-tag">JAVA &bull; AUDIO</span>
+      </a>
       <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">
         <i class="fas fa-bars"></i>
       </button>
@@ -25,32 +28,44 @@
     </div>
   </header>
 
-  <main class="container page-content">
-    <h1>Get In Touch</h1>
-    <p>Have a question or want to work together? Send me a message below!</p>
-    
-    <form id="contact-form" class="contact-form">
-      <label for="name">Full Name</label>
-      <input type="text" id="name" name="name" placeholder="Enter your name" required>
+  <main class="container">
+    <section class="contact-wrapper">
+      <div class="contact-info">
+        <span class="pill-tag">Collaborate</span>
+        <h1>Let's Build or Compose Together</h1>
+        <p>Looking for a Java backend engineer or custom music production for your next project? Drop a message below.</p>
+      </div>
 
-      <label for="email">Email Address</label>
-      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+      <form id="contact-form" class="contact-form">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" placeholder="e.g. Alex Nguyen" required>
 
-      <label for="message">Message</label>
-      <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+        <label for="topic">Inquiry Type</label>
+        <select id="topic" name="topic">
+          <option value="Java Development">Java Backend Development</option>
+          <option value="Music Composition">Music Composition / Sound Design</option>
+          <option value="Both">Both / General Inquiry</option>
+        </select>
 
-      <button type="submit" class="btn">Send Message</button>
-      <p id="form-status" class="status-msg"></p>
-    </form>
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" placeholder="Tell me about your project or track..." required></textarea>
+
+        <button type="submit" class="btn btn-primary">Send Message</button>
+        <p id="form-status" class="status-msg"></p>
+      </form>
+    </section>
   </main>
 
   <footer>
     <div class="container footer-content">
-      <p>&copy; 2026 My Portfolio. Built from scratch.</p>
+      <p>&copy; 2026 <strong>D7 Studio</strong> &mdash; Coded &amp; Composed from Scratch.</p>
       <div class="social-links">
         <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
-        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="SoundCloud"><i class="fab fa-soundcloud"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
       </div>
     </div>
   </footer>
